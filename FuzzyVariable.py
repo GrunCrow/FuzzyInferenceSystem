@@ -56,8 +56,8 @@ def show_graphics():
     electric_volt_low = np.vectorize(membership_functions.electric_volt_low)
     electric_volt_high = np.vectorize(membership_functions.electric_volt_high)
 
-    ax3.plot(y, electric_volt_low(w), 'b', linewidth=1.5, label='Optimal')
-    ax3.plot(y, electric_volt_high(w), 'r', linewidth=1.5, label='Humid')
+    ax3.plot(y, electric_volt_low(w), 'b', linewidth=1.5, label='Low')
+    ax3.plot(y, electric_volt_high(w), 'r', linewidth=1.5, label='High')
 
     ax3.set_title('Electric Volt')
     ax3.legend()
