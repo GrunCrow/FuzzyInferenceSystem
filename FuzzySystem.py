@@ -16,7 +16,7 @@ def take_values(ut, tdiff, td, ev):
     dp_humid = mf.dew_point_humid(td)
 
     ev_low = mf.electric_volt_low(ev)
-    ev_high = mf.electric_volt_high(ev)
+    ev_regular = mf.electric_volt_regular(ev)
 
     ut_value = 'Low', ut_low
 
@@ -41,7 +41,9 @@ def take_values(ut, tdiff, td, ev):
         dp_value = 'Humid', dp_humid
 
     ev_value = 'Low', ev_low
-    if ev_low > ev_value[1]:
-        ev_value = 'High', ev_high
+    if ev_regular > ev_value[1]:
+        ev_value = 'Regular', ev_regular
+
+    print(ut_value[0], td_value[0], dp_value[0], ev_value[0])
 
     return fr.evaluation(ut_value[0], td_value[0], dp_value[0], ev_value[0])

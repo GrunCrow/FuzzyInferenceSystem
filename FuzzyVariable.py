@@ -54,10 +54,10 @@ def show_graphics():
     w = np.linspace(120, 230, 100)
 
     electric_volt_low = np.vectorize(membership_functions.electric_volt_low)
-    electric_volt_high = np.vectorize(membership_functions.electric_volt_high)
+    electric_volt_regular = np.vectorize(membership_functions.electric_volt_regular)
 
     ax3.plot(y, electric_volt_low(w), 'b', linewidth=1.5, label='Low')
-    ax3.plot(y, electric_volt_high(w), 'r', linewidth=1.5, label='High')
+    ax3.plot(y, electric_volt_regular(w), 'r', linewidth=1.5, label='Regular')
 
     ax3.set_title('Electric Volt')
     ax3.legend()

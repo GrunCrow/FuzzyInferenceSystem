@@ -83,10 +83,10 @@ def electric_volt_low(x):
         return 0
 
 
-def electric_volt_high(x):
+def electric_volt_regular(x):
     if 170 <= x <= 190:
-        return (x - 170) / 2
-    elif 160 <= x <= 180:
+        return (x - 170) / 20
+    elif 190 <= x <= 220:
         return 1
     else:
         return 0
