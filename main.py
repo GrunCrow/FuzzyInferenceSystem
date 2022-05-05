@@ -2,12 +2,15 @@ import FuzzyVariable as fv
 import FuzzySystem as fs
 
 # Visualize these universes and membership functions
-#fv.show_graphics()
+fv.show_graphics()
 
-ut = 6.4
-tdiff = 30
-td = 10
-ev = 160
+# Ask for the values for the function:
+ut = input("Enter User temperature Value: ")
+tdiff = input("Enter Temperature Difference Value: ")
+td = input("Enter Dew Point Value: ")
+ev = input("Enter Electric Volt Value: ")
 
-fs.take_values(ut, tdiff, td, ev)
+output = fs.take_values(float(ut), float(tdiff), float(td), float(ev))
+
+print(output)
 
