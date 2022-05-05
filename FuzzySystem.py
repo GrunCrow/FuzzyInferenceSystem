@@ -44,7 +44,4 @@ def take_values(ut, tdiff, td, ev):
     if ev_low > ev_value[1]:
         ev_value = 'High', ev_high
 
-    results = fr.evaluation(ut_value[0], td_value[0], dp_value[0], ev_value[0])
-
-    print(results)
-
+    return fr.evaluation(ut_value[0], td_value[0], dp_value[0], ev_value[0])
