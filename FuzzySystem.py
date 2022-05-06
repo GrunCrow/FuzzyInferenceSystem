@@ -44,6 +44,6 @@ def take_values(ut, tdiff, td, ev):
     if ev_regular > ev_value[1]:
         ev_value = 'Regular', ev_regular
 
-    print(ut_value[0], td_value[0], dp_value[0], ev_value[0])
+    # print(ut_value[0], td_value[0], dp_value[0], ev_value[0])
 
     return fr.evaluation(ut_value[0], td_value[0], dp_value[0], ev_value[0])
